@@ -1,3 +1,5 @@
+![Logo](../assets/logo.png)
+
 # 🧙‍♀️ Sandra's Zauberschrank ✨
 
 Willkommen, neugierige Reisende, im **Zauberschrank von Sandra**!  
