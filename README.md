@@ -1,4 +1,6 @@
-![Logo](../assets/logo.png)
+<p align="center">
+  <img src="assets/logo.png" alt="Sandra's Zauberschrank Logo" width="200"/>
+</p>
 
 # 🧙‍♀️ Sandra's Zauberschrank ✨
 
