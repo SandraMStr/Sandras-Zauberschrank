@@ -9,9 +9,10 @@ class Environment:
     # Initialisiert die Umgebung mit einem Bild, das die Eignung des Geländes darstellt
     def __init__(self, image_path):
         img = Image.open(image_path).convert("L")
-        self.terrain = np.array(img)
-        self.height, self.width = self.terrain.shape
+        self.terrain = np.array(img) / 255.0
+        self.width = self.terrain.shape[1]
+        self.height = self.terrain.shape[0]
 
-    # Gibt die Eignung eines bestimmten Punktes (x, y) zurück, normalisiert auf den Bereich [0, 1]
+    # Gibt die Eignung eines bestimmten Punktes (x, y) zurück
     def get_suitability(self, x, y):
-        return self.terrain[y, x] / 255.0
+        return self.terrain[y, x]

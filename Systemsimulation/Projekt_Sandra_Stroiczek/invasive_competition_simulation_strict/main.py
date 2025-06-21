@@ -12,21 +12,25 @@ def run_simulation():
     ca = CellularAutomaton(env.width, env.height)
 
     species_list = [
-        PlantSpecies(1, 0.6, (0, 150, 0), (0.1, 0.8), 0.8),  # Staudenknöterich – uferliebend
-        PlantSpecies(2, 0.4, (255, 0, 0), (0.6, 1.0), 0.9),  # Riesenbärenklau – trockenliebend
-        PlantSpecies(3, 0.5, (0, 0, 255), (0.2, 0.7), 0.6),  # Springkraut – feuchtliebend
-        PlantSpecies(4, 0.7, (200, 200, 0), (0.4, 1.0), 0.5) # Kudzu – meidet Wasser
+        # Staudenknöterich (Grün)
+        PlantSpecies(1, 0.7, (0, 150, 0), (0.3, 0.9), 0.85),
+        # Riesenbärenklau (Rot)
+        PlantSpecies(2, 0.6, (255, 0, 0), (0.5, 1.0), 0.95),
+        # Springkraut (Blau)
+        PlantSpecies(3, 0.9, (0, 0, 255), (0.2, 0.8), 0.5),
+        # Kudzu (Gelb)
+        PlantSpecies(4, 0.85, (200, 200, 0), (0.4, 1.0), 0.7)
     ]
 
     ca.seed(1, [(10, 10)])
-    ca.seed(2, [(80, 10)])
-    ca.seed(3, [(10, 80)])
-    ca.seed(4, [(80, 80)])
+    ca.seed(2, [(90, 10)])
+    ca.seed(3, [(10, 90)])
+    ca.seed(4, [(90, 90)])
 
-    for step in range(100):
+    for step in range(150):
         ca.step(env, species_list)
         plot_grid(ca.grid, species_list, step)
-        time.sleep(0.1)
+        time.sleep(0.05)
 
 if __name__ == "__main__":
     run_simulation()

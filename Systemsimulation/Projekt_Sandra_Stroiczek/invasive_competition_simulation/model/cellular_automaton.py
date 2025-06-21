@@ -1,14 +1,18 @@
 
 import numpy as np
 
+# Zellulärer Automat zur Simulation der Artenausbreitung basierend auf lokaler Eignung und Wettbewerbsfähigkeit
+
 class CellularAutomaton:
     def __init__(self, width, height):
         self.grid = np.zeros((height, width), dtype=np.int8)
 
+    # Initialisierung der Zellen mit Arten-IDs
     def seed(self, species_id, coords):
         for x, y in coords:
             self.grid[y, x] = species_id
 
+    # Schrittweise Aktualisierung des Gitters basierend auf der lokalen Eignung und Wettbewerbsfähigkeit
     def step(self, env, species_list):
         new_grid = self.grid.copy()
         height, width = self.grid.shape
@@ -37,6 +41,7 @@ class CellularAutomaton:
 
         self.grid = new_grid
 
+    # Zählt die Nachbarn einer bestimmten Art in der Umgebung einer Zelle
     def count_neighbors(self, x, y, species_id):
         y_min = max(0, y - 1)
         y_max = min(self.grid.shape[0], y + 2)
