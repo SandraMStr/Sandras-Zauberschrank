@@ -2,6 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+# Aktiviert den interaktiven Modus für Live-Updates
 def plot_grid(grid, species_list, step):
     color_map = {0: (1, 1, 1)}
     for species in species_list:
@@ -16,7 +17,7 @@ def plot_grid(grid, species_list, step):
     plt.imshow(rgb_grid)
     plt.title(f"Step {step}")
     plt.axis("off")
-    plt.pause(0.01)
+    plt.pause(0.05)
     plt.clf()
     plt.close()
 

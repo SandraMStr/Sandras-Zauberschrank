@@ -27,10 +27,10 @@ def run_simulation():
     ca.seed(3, [(10, 90)])
     ca.seed(4, [(90, 90)])
 
-    for step in range(150):
+    for step in range(60):
         ca.step(env, species_list)
         plot_grid(ca.grid, species_list, step)
-        time.sleep(0.05)
+        time.sleep(0.5)
 
 if __name__ == "__main__":
     run_simulation()

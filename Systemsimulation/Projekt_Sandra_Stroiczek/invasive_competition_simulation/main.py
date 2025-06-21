@@ -23,7 +23,7 @@ def run_simulation():
     ca.seed(3, [(10, 80)])
     ca.seed(4, [(80, 80)])
 
-    for step in range(100):
+    for step in range(120):
         ca.step(env, species_list)
         plot_grid(ca.grid, species_list, step)
         time.sleep(0.1)
