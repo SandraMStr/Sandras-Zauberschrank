@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/Logo.jpg" alt="Sandra's Zauberschrank Logo" width="200"/>
+  <img src="assets/Logo2.jpg" alt="Sandra's Zauberschrank Logo" width="200"/>
 </p>
 
 # 🧙‍♀️ Sandra's Zauberschrank ✨

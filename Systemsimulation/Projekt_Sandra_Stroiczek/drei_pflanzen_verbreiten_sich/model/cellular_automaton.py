@@ -9,6 +9,16 @@ class CellularAutomaton:
         for x, y in coords:
             self.grid[y, x] = species_id
 
+    # Steps the cellular automaton forward by one time step
+    # Each species tries to spread based on its competitiveness and local suitability
+    # If a species has more neighbors than its competitiveness allows, it will not spread
+    # If a neighboring species has higher competitiveness, it will replace the current species
+    # If the cell is empty, it will be filled with the most competitive species that can spread there
+    # The suitability of the environment is taken into account for each cell
+    # The species with the highest competitiveness that can spread will take over the cell
+    # If multiple species have the same competitiveness, the first one in the list will take over
+    # The grid is updated in a new grid to avoid conflicts during the step
+    # The method assumes that species_list is a list of PlantSpecies objects
     def step(self, env, species_list):
         new_grid = self.grid.copy()
         height, width = self.grid.shape

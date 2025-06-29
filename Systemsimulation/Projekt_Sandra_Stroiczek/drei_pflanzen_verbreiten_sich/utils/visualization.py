@@ -4,6 +4,7 @@ import numpy as np
 
 plt.ion()
 
+# Function to plot the grid of the cellular automaton
 def plot_grid(grid, species_list, step):
     height, width = grid.shape
     rgb_image = np.zeros((height, width, 3), dtype=np.uint8)

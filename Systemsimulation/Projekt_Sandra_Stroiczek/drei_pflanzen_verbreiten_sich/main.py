@@ -5,15 +5,16 @@ from model.species import PlantSpecies
 from utils.visualization import plot_grid
 import time
 
+# Simulation of plant species spreading in a cellular automaton environment
 def run_simulation():
     env = Environment("data/terrain.png")
     ca = CellularAutomaton(env.width, env.height)
 
     species_list = [
-        PlantSpecies(1, 0.4, (0, 255, 0), (0.2, 1.0), 0.6),
-        PlantSpecies(2, 0.3, (255, 0, 0), (0.0, 0.6), 0.8),
-        PlantSpecies(3, 0.2, (0, 0, 255), (0.3, 0.9), 0.4),
-        PlantSpecies(4, 0.5, (255, 255, 0), (0.1, 0.8), 0.7),
+        PlantSpecies(1, 0.4, (0, 255, 0), (0.2, 1.0), 0.6),     # grün
+        # PlantSpecies(2, 0.3, (255, 0, 0), (0.0, 0.6), 0.8),     # rot
+        PlantSpecies(3, 0.2, (0, 0, 255), (0.3, 0.9), 0.4),     # blau
+        PlantSpecies(4, 0.5, (255, 255, 0), (0.1, 0.8), 0.7),   # gelb
     ]
 
     ca.seed(1, [(10, 10)])

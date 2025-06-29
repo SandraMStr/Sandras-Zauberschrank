@@ -1,6 +1,7 @@
 
 import numpy as np
 
+# Represents a plant species with its properties and behavior in the cellular automaton 
 class PlantSpecies:
     def __init__(self, id, reproduction_rate, color, preferred_range, competitiveness):
         self.id = id
