@@ -1,5 +1,4 @@
-<p align="center">
-  <img src="assets/Logo2.jpg" alt="Sandra's Zauberschrank Logo" width="300"/>
+![Logo2](https://github.com/user-attachments/assets/84308b4a-a4e3-4afe-b055-189277e98d90)< width="300" />
 </p>
 
 # 🧙‍♀️ Sandra's Zauberschrank ✨
