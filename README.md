@@ -1,4 +1,4 @@
-![Logo2](https://github.com/user-attachments/assets/84308b4a-a4e3-4afe-b055-189277e98d90)< width="300" />
+![Logo2](https://github.com/user-attachments/assets/84308b4a-a4e3-4afe-b055-189277e98d90)<p align="center">
 </p>
 
 # 🧙‍♀️ Sandra's Zauberschrank ✨
